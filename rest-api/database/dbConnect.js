@@ -1,8 +1,9 @@
 const mysql = require('mysql');
 
-const connection = mysql.createPool({
-    host: 'mysqlazurejp.mysql.database.azure.com:3306',
-    user: 'azure',
-    password: 'Bancojp123@',
+const conexao = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
     database: 'db_galeria'
 });
+module.exports = conexao;

@@ -5,6 +5,8 @@ const api = express();
 const port = 3000;
 const router = express.Router();
 
+const galeriaRouter = require('./router/galeriaRouter');
+
 api.use(cors());
 
 api.use(bodyParser.urlencoded({extended: true}));
@@ -15,6 +17,7 @@ router.get("/", (request, response) =>  response.json({
 }));
 
 api.use("/", router);
+api.use("/galeria", galeriaRouter);
 
 api.listen(port);
 console.log("Run API Express is On");
